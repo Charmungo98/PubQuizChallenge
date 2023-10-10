@@ -50,3 +50,23 @@ function loadQuestion() {
         optionsList.appendChild(li);
     });
 }
+function checkAnswer(event) {
+    const selectedOption = event.target.innerText;
+    const currentQuestion = questions[currentQuestionIndex];
+
+
+    if (selectedOption === currentQuestion.correctAnswer) {
+        score++;
+        scoreTracker.innerText = `Score: ${score}`; // Update the score display
+    }
+
+
+    currentQuestionIndex++;
+
+
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+}
