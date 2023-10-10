@@ -104,3 +104,19 @@ function startTimer() {
         }
     }, 1000); // Update the timer every 1 second
 }
+
+
+restartBtn.addEventListener('click', () => {
+    currentQuestionIndex = 0;
+    score = 0;
+    questionText.style.display = 'block';
+    optionsList.style.display = 'block';
+    resultText.style.display = 'none';
+    restartBtn.style.display = 'none';
+    scoreTracker.innerText = 'Score: 0';
+    timerDisplay.innerText = `Time Left: ${quizDuration} seconds`;
+    loadQuestion();
+});
+
+
+loadQuestion();
