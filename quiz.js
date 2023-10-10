@@ -1,0 +1,32 @@
+const questions = [
+    {
+        question: "What is 2 + 2?",
+        options: ["3", "4", "5", "6"],
+        correctAnswer: "4"
+    },
+    {
+        question: "What is the capital of France?",
+        options: ["Berlin", "London", "Madrid", "Paris"],
+        correctAnswer: "Paris"
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        options: ["Earth", "Mars", "Venus", "Jupiter"],
+        correctAnswer: "Mars"
+    }
+];
+
+
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+const quizDuration = 30; // Set the duration of each question to 30 seconds
+let timeLeft = quizDuration;
+
+
+const questionText = document.getElementById('question-text');
+const optionsList = document.getElementById('options');
+const resultText = document.getElementById('result-text');
+const restartBtn = document.getElementById('restart-btn');
+const scoreTracker = document.getElementById('score-tracker');
+const timerDisplay = document.getElementById('timer');
