@@ -70,3 +70,24 @@ function checkAnswer(event) {
         showResult();
     }
 }
+
+const celebrationImage = document.getElementById('celebration-image');
+const totalQuestionsDisplay = document.getElementById('total-questions');
+
+
+function showResult() {
+    questionText.style.display = 'none';
+    optionsList.style.display = 'none';
+    resultText.style.display = 'block';
+    totalQuestionsDisplay.innerText = questions.length;
+    scoreTracker.innerText = score;
+
+
+    if (score === questions.length) {
+        celebrationImage.style.display = 'block'; // Show the celebration image
+    }
+
+
+    restartBtn.style.display = 'block';
+    clearInterval(timer); // Stop the timer
+}
