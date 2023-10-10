@@ -24,3 +24,23 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
+#question-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#options {
+    list-style: none;
+    padding: 0;
+}
+
+
+.option {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
