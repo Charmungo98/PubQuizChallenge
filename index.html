@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>Pub Quiz Challenge</h1>
+        <div id="question-container">
+            <p id="question-text">Question goes here</p>
+            <ul id="options">
+                <li><button class="option">Option 1</button></li>
+                <li><button class="option">Option 2</button></li>
+                <li><button class="option">Option 3</button></li>
+                <li><button class="option">Option 4</button></li>
+            </ul>
+        </div>
+        <div id="result-container">
+            <p id="result-text">Your result will be displayed here</p>
+            <button id="restart-btn">Restart</button>
+        </div>
+    </div>
+
+    <div id="result-container">
+        <p id="result-text">Your score: <span id="score-display">0</span>/<span id="total-questions"></span></p>
+        <img id="celebration-image" src="celebration.jpg" alt="Celebration Image" style="display: none;">
+        <button id="restart-btn">Restart</button>
+    </div>
+
+
+    <!-- Add the following elements to your HTML -->
+    <p id="score-tracker">Score: 0</p>
+    <p id="timer">Time left: 20 seconds</p>
+
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
