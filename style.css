@@ -44,3 +44,14 @@ h1 {
     cursor: pointer;
 }
 
+#result-container {
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+}
+
+
+#result-text {
+    color: #333;
+    font-weight: bold;
+}
