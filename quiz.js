@@ -91,3 +91,16 @@ function showResult() {
     restartBtn.style.display = 'block';
     clearInterval(timer); // Stop the timer
 }
+function startTimer() {
+    clearInterval(timer); // Reset the timer
+    timeLeft = quizDuration; // Reset the timer duration
+    timer = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            showResult();
+        } else {
+            timerDisplay.innerText = `Time Left: ${timeLeft} seconds`;
+            timeLeft--;
+        }
+    }, 1000); // Update the timer every 1 second
+}
