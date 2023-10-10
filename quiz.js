@@ -30,3 +30,23 @@ const resultText = document.getElementById('result-text');
 const restartBtn = document.getElementById('restart-btn');
 const scoreTracker = document.getElementById('score-tracker');
 const timerDisplay = document.getElementById('timer');
+
+function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionText.innerText = currentQuestion.question;
+    optionsList.innerHTML = '';
+
+
+    startTimer(); // Start the timer for the new question
+
+
+    currentQuestion.options.forEach(option => {
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        button.classList.add('option');
+        button.innerText = option;
+        button.addEventListener('click', checkAnswer);
+        li.appendChild(button);
+        optionsList.appendChild(li);
+    });
+}
